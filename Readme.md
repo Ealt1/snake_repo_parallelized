@@ -1,7 +1,5 @@
 # Usage ReadMe
 
-## A Java-based `Matlab` class for progress monitoring during a `parfor` loop
-
 ### Usage
 
 Download the snake_repo_parallel folder
