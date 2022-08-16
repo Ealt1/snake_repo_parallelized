@@ -6,7 +6,7 @@ Download the snake_repo_parallel folder
 
 Make sure your version of MATLAB has Parallel Computing Toolbox installed.
 
-Add snaker_repo_parallel and all subfolders to the MATLAB Path
+Add snake_repo_parallelized and all subfolders to the MATLAB Path
 
 run run_synthesis.m
 
