@@ -1,31 +1,23 @@
-# Parfor progress monitor
-<img align="right" src="https://github.com/DylanMuir/ParforProgMon/raw/master/progress_bar.png" />
+# Usage ReadMe
 
 ## A Java-based `Matlab` class for progress monitoring during a `parfor` loop
 
 ### Usage
-Begin by creating a parallel pool.
- 
-Then construct a ParforProgMon object:
 
-    ppm = ParforProgMon(strWindowTitle, nNumIterations <, nProgressStepSize, nWidth, nHeight>);
- 
- `strWindowTitle` is a string containing the title of the progress bar
-  window. `nNumIterations` is an integer with the total number of
-  iterations in the loop.
- 
-#### Optional arguments
-  `nProgressStepSize` specifies to update the progress bar every time this
-  number of steps passes. `nWidth` and `nHeight` specify the size of the
-  progress window.
- 
-Within the `parfor` loop:
+Download the snake_repo_parallel folder
 
-    parfor (nIndex = 1:nNumIterations)
-       ppm.increment();
-    end
+Add snaker_repo_parallel and all subfolders to the MATLAB Path
 
-### Credits
-[Parfor Progress monitor](https://www.mathworks.com/matlabcentral/fileexchange/24594-parfor-progress-monitor)
+run run_synthesis.m
 
-[Parfor Progress monitor v2](https://www.mathworks.com/matlabcentral/fileexchange/31673-parfor-progress-monitor-v2)
+You will be prompted to enter 7, 15, or 23, corresponding to the number of to the number of the transition system you wish to compute.
+
+If you wish to test and System Labeling or Find Controlled Invariant Set functions, simply uncomment them. WARNING: these functions have not been fully modified to support the parallelized System Loading function. 
+ 
+#### Notes
+
+1. Note that there is a small bug causing the parallelized transition system to be slightly different from the original iteratively built transition system
+
+2. Only the System Loading function has been parallelized. More work is needed to parallelize the Find Controlled Invariant Set function.
+
+3. IMPORTANT: run_sim.m, while intended to be a visual representation of the transition system and its corresponding CIS, has not been updated and is not compatible with the parallelized code.
