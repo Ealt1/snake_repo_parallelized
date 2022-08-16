@@ -1,0 +1,15 @@
+
+run_synthesis.m 
+    i) create a nondeterministic finite transition system, 
+       * load_sys1() creates the system from scratch and is slow to run
+       * load_sys1('load') loads a pre-computed system and is fast to run
+    ii) label the safe states
+    iii) synthesize a safety controller 
+    
+run_sim.m 
+    i) simulate the closed-loop system with the sythesized safety controller (saved in 'everything.mat')
+    ii) the position of the latest item that pops out is selected by the environment (i.e., the user)  
+
+    
+ 
+ 
